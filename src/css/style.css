@@ -1,0 +1,231 @@
+@import url('normalize.css');
+@import url('global.css');
+
+@import url('firstScreen.css');
+
+body {
+  background: rgba(1, 2, 9, 1);
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(1, 2, 9, 0) 0%, #010209 100%);
+
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* 
+.content {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+*/
+
+section {
+  min-height: 100vh;
+}
+
+.main-text-blocks {
+  min-height: 90vh;
+  display: flex;
+
+  &[left] {
+    justify-content: flex-start;
+  }
+
+  &[right] {
+    justify-content: flex-end;
+  }
+
+  .body {
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: -1px;
+  }
+
+  .text {
+    font-family: var(--secondary-font);
+    font-size: 30px;
+    line-height: 1.333;
+  }
+}
+
+.capabilities {
+  .inner {
+    max-width: calc(100% - 144px);
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+  }
+
+  .capability-item-outer {
+    display: flex;
+    justify-content: flex-start;
+    &:nth-child(1),
+    &:nth-child(5) {
+      padding-left: 98px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(6) {
+      padding-right: 98px;
+    }
+
+    &:nth-child(2n) {
+      justify-content: flex-end;
+    }
+  }
+
+  .capability-item {
+    max-width: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+.for-business {
+  background-image: url('../img/macbook-bg.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  .inner {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    @media all and (min-width: 1800px) {
+      max-width: calc(100% - 250px);
+    }
+  }
+
+  .heading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .title-smaller {
+    font-weight: 700;
+  }
+
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: auto 400px auto;
+    gap: 60px;
+    align-items: center;
+    margin-top: auto;
+    .left-items {
+      text-align: right;
+      padding-right: 144px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 515px;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 84px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: url('../img/braces-icon.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+      }
+    }
+
+    .middle-form {
+      border-radius: 16px;
+      background: #fff;
+      padding: 30px;
+      flex-direction: column;
+      color: #000;
+      line-height: 1.5;
+      text-align: center;
+      .middle-form-text {
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+
+      .title {
+        font-weight: 700;
+        font-family: var(--primary-font);
+        font-size: 20px;
+      }
+
+      .text {
+        font-weight: 400;
+        font-family: var(--secondary-font);
+        font-size: 14px;
+        opacity: 0.5;
+      }
+
+      .button {
+        border-radius: 4px;
+        background: linear-gradient(84deg, #019741 0%, #7cb927 100%);
+        min-width: 200px;
+        padding: 10px 26px;
+        font-family: var(--primary-font);
+        color: var(--primary-color);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.7;
+        border: 0;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+    }
+
+    .right-items {
+      text-align: left;
+      padding-left: 144px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 515px;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 84px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-image: url('../img/braces-icon.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        transform: rotateY(180deg);
+      }
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+}

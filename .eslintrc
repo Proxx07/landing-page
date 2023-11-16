@@ -1,0 +1,34 @@
+{
+  "extends": ["airbnb/base", "prettier"],
+  "plugins": ["prettier"],
+  "parser": "babel-eslint",
+  "globals": {
+    "fetch": true,
+    "window": true,
+    "document": true,
+    "localStorage": true
+  },
+  "rules": {
+    "prettier/prettier": ["error"],
+    "no-console": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
+    "quote-props": 0,
+    "linebreak-style": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["webpack.common.js", "webpack.dev.js", "webpack.prod.js"]
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  }
+}
