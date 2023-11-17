@@ -36,12 +36,12 @@ nav ul {
 
 .container {
   width: 100%;
-  max-width: calc(1920px - 90px);
-  padding: 0 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
-
-  @media all and (max-width: 1440px) {
-    max-width: 100%;
+  max-width: calc(100% - 90px);
+  @media all and (min-width: 1920px) {
+    max-width: calc(1920px - 90px);
   }
 }
 
@@ -62,7 +62,7 @@ h2.section-title {
 
 .title-smaller {
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.333;
 }
 
@@ -83,4 +83,10 @@ p {
   font-weight: normal;
   line-height: 1.666;
   font-weight: 500;
+}
+
+[card-effect] {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(35px);
 }

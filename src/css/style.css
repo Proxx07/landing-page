@@ -29,10 +29,12 @@ body {
 
 section {
   min-height: 100vh;
+  padding-top: 93px;
+  padding-bottom: 113px;
 }
 
 .main-text-blocks {
-  min-height: 90vh;
+  /* min-height: 90vh; */
   display: flex;
 
   &[left] {
@@ -61,6 +63,10 @@ section {
     font-family: var(--secondary-font);
     font-size: 30px;
     line-height: 1.333;
+  }
+
+  .title-smaller {
+    font-weight: 600;
   }
 }
 
@@ -103,16 +109,12 @@ section {
 }
 
 .for-business {
-  background-image: url('../img/macbook-bg.png');
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: auto;
   .inner {
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 140px;
+    gap: 70px;
     @media all and (min-width: 1800px) {
       max-width: calc(100% - 250px);
     }
@@ -125,16 +127,18 @@ section {
     gap: 10px;
   }
 
-  .title-smaller {
-    font-weight: 700;
-  }
-
   .content-wrapper {
     display: grid;
     grid-template-columns: auto 400px auto;
     gap: 60px;
-    align-items: center;
     margin-top: auto;
+    align-items: flex-start;
+    background-image: url('../img/macbook-bg.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 800px;
+    padding-top: 100px;
     .left-items {
       text-align: right;
       padding-right: 144px;
@@ -143,6 +147,7 @@ section {
       flex-direction: column;
       gap: 30px;
       max-width: 515px;
+      margin-left: auto;
       &:before {
         content: '';
         position: absolute;
@@ -207,6 +212,7 @@ section {
       flex-direction: column;
       gap: 30px;
       max-width: 515px;
+      margin-right: auto;
       &:before {
         content: '';
         position: absolute;
@@ -227,5 +233,74 @@ section {
       flex-direction: column;
       gap: 5px;
     }
+  }
+}
+
+.for-clients {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .section-title {
+    margin-bottom: 60px;
+  }
+
+  .inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .client-cards {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+  }
+}
+
+.use-cases {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('../img/use-cases-bg.png'), lightgray 50% / cover no-repeat;
+  border-radius: 20px 20px 0 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .inner {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .item {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(29, 95, 57, 0.4);
+  }
+
+  .icon {
+    margin-bottom: 20px;
+  }
+
+  .button {
+    padding: 18px 24px;
+    border: 0;
+    background: #00adee;
+    border-radius: 50px;
+    font-weight: 600;
+    min-width: 280px;
+    color: var(--primary-color);
+    line-height: 1.5;
+    cursor: pointer;
   }
 }
