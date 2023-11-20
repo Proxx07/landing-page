@@ -18,7 +18,9 @@
 
 <body>
   <div class="site-wrapper">
-
+    <div class="video-wrapper">
+      <video src="./img/media/first-screen-video.mp4" autoplay muted loop></video>
+    </div>
     <header class="header">
       <div class="container inner">
         <a href="/" class="logo">
@@ -31,7 +33,7 @@
               <li> <a class="menu-item" href="#" data-ln="menu_main">Главная</a> </li>
               <li> <a class="menu-item" href="#">Able ID</a> </li>
               <li> <a class="menu-item" href="#">Able Reader</a> </li>
-              <li> <a class="menu-item" href="#" data-ln="menu_connect">Связаться</a> </li>
+              <li> <a class="menu-item" href="#use-cases" data-ln="menu_connect">Связаться</a> </li>
             </ul>
           </nav>
           <div class="language">
@@ -47,12 +49,12 @@
     </header>
 
     <!-- <div class="content"> -->
-    <section class="container flex-center">
+    <section class="container flex-center main-section">
       <h1 class="main-heading"> Able<span>ID</span> </h1>
     </section>
 
-    <section class="container main-text-blocks-wrapper">
-      <div class="main-text-blocks" left>
+    <section class="container main-text-blocks-wrapper" id="about">
+      <div class="main-text-blocks main-text-1" left>
         <div class="body">
           <div class="title" data-ln="text_block_title1">
             Современное решение для биометрической идентификации
@@ -63,7 +65,7 @@
         </div>
       </div>
 
-      <div class="main-text-blocks" right>
+      <div class="main-text-blocks main-text-2" right>
         <div class="body">
           <div class="section-text" data-ln="text_block_text2">
             <p>
@@ -81,7 +83,7 @@
         </div>
       </div>
 
-      <div class="main-text-blocks" left>
+      <div class="main-text-blocks main-text-3" left>
         <div class="body">
           <div class="title-smaller" data-ln="text_block_title3">
             Биометрическая верификация — самый быстрый и надежный способ подтвердить личность пользователя и защитить
@@ -97,7 +99,7 @@
     </section>
 
 
-    <section class="container capabilities flex-center">
+    <section class="container capabilities flex-center" id="advantages">
       <div class="inner">
         <div class="capability-item-outer">
           <div class="capability-item">
@@ -171,7 +173,7 @@
       </div>
     </section>
 
-    <section class="container for-business">
+    <section class="container for-business" id="for-business">
       <div class="inner">
         <div class="heading">
           <h2 class="section-title" data-ln="for_business_title">Для бизнеса</h2>
@@ -264,7 +266,7 @@
       </div>
     </section>
 
-    <section class="container for-clients">
+    <section class="container for-clients" id="for-clients">
       <h2 class="section-title" data-ln="for_clients_title">Для клиента</h2>
 
       <div class="inner">
@@ -310,7 +312,7 @@
       </div>
     </section>
 
-    <section class="use-cases flex-center">
+    <section class="use-cases flex-center" id="use-cases">
       <div class="container">
         <h2 class="section-title" data-ln="use_case_title">Сценарии использования</h2>
         <div class="inner">
@@ -374,11 +376,11 @@
 
         <nav>
           <ul>
-            <li> <a href="#" class="menu-item" data-ln="menu_about"> О продукте </a> </li>
-            <li> <a href="#" class="menu-item" data-ln="menu_advantages"> Преимущества </a> </li>
-            <li> <a href="#" class="menu-item" data-ln="menu_business"> Для бизнеса </a> </li>
-            <li> <a href="#" class="menu-item" data-ln="menu_customer"> Для клиента </a> </li>
-            <li> <a href="#" class="menu-item" data-ln="menu_script"> Сценарии </a> </li>
+            <li> <a href="#about" class="menu-item" data-ln="menu_about"> О продукте </a> </li>
+            <li> <a href="#advantages" class="menu-item" data-ln="menu_advantages"> Преимущества </a> </li>
+            <li> <a href="#for-business" class="menu-item" data-ln="menu_business"> Для бизнеса </a> </li>
+            <li> <a href="#for-clients" class="menu-item" data-ln="menu_customer"> Для клиента </a> </li>
+            <li> <a href="#use-cases" class="menu-item" data-ln="menu_script"> Сценарии </a> </li>
           </ul>
         </nav>
 
