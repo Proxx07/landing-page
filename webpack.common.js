@@ -70,7 +70,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, 'src/img/favicon'),
-          to: path.resolve(__dirname, 'dist/img/favicon'),
+          to: path.resolve(__dirname, 'docs/img/favicon'),
         },
       ],
     }),
