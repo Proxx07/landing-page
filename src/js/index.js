@@ -17,7 +17,7 @@ gsap.fromTo(
     opacity: 1,
     translateY: 0,
     duration: 1.2,
-    delay: 4,
+    delay: 3,
   },
 );
 
@@ -53,6 +53,19 @@ gsap.to('.main-text-3', {
     trigger: '.main-text-3',
     start: 'top 80%',
     end: 'bottom 50%',
+    scrub: true,
+  },
+});
+
+gsap.to('.capability-item-outer', {
+  opacity: 1,
+  translateX: 0,
+  stagger: 1,
+  duration: 10,
+  scrollTrigger: {
+    trigger: '.capabilities',
+    start: 'top center',
+    end: 'bottom bottom',
     scrub: true,
   },
 });
