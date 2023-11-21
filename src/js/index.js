@@ -23,13 +23,13 @@ gsap.fromTo(
 
 const mainTextBlocks = document.querySelectorAll('.main-text-blocks');
 mainTextBlocks.forEach((item) => {
-  gsap.to(item, {
-    translateY: 300,
-    translateX: 0,
+  const animateItem = item.querySelector('.body');
+  gsap.to(animateItem, {
+    translateY: 400,
     opacity: 1,
     scrollTrigger: {
       trigger: item,
-      start: 'top 80%',
+      start: 'top 70%',
       end: '80% 50%',
       scrub: true,
     },
@@ -56,7 +56,6 @@ gsap.from('.for-business .heading', {
     trigger: '.for-business .header-wrapper',
     start: 'center center',
     end: '+=400px center',
-    // scrub: true,
     pin: true,
   },
 });
@@ -95,6 +94,40 @@ rightItems.forEach((item) => {
       scrub: true,
     },
   });
+});
+
+gsap.from('.for-clients .section-title', {
+  translateX: '-5%',
+  opacity: 0,
+  duration: 0.8,
+  scrollTrigger: {
+    trigger: '.for-clients-inner',
+    start: '-70%, center',
+    toggleActions: 'play none play reverse',
+  },
+});
+
+const clientCards = document.querySelectorAll('.for-clients .client-cards');
+gsap.from('.for-clients-inner .inner', {
+  translateX: '100%',
+  scrollTrigger: {
+    trigger: '.for-clients-inner',
+    start: 'top center',
+    end: '+=1000px center',
+    scrub: true,
+    pin: true,
+  },
+});
+gsap.from(clientCards, {
+  opacity: 0.3,
+  stagger: 1,
+  ease: 'ease',
+  scrollTrigger: {
+    trigger: '.for-clients-inner',
+    start: 'top center',
+    end: '+=750px center',
+    scrub: true,
+  },
 });
 
 // start = "top, center" - top of the trigger element, center of viewport
