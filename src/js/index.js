@@ -21,40 +21,19 @@ gsap.fromTo(
   },
 );
 
-gsap.to('.main-text-1', {
-  translateY: 300,
-  translateX: 0,
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.main-text-1',
-    start: 'top 80%',
-    end: '80% 50%',
-    scrub: true,
-  },
-});
-
-gsap.to('.main-text-2', {
-  translateY: 300,
-  translateX: 0,
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.main-text-2',
-    start: 'top 80%',
-    end: '80% 50%',
-    scrub: true,
-  },
-});
-
-gsap.to('.main-text-3', {
-  translateY: 300,
-  translateX: 0,
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.main-text-3',
-    start: 'top 80%',
-    end: 'bottom 50%',
-    scrub: true,
-  },
+const mainTextBlocks = document.querySelectorAll('.main-text-blocks');
+mainTextBlocks.forEach((item) => {
+  gsap.to(item, {
+    translateY: 300,
+    translateX: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: item,
+      start: 'top 80%',
+      end: '80% 50%',
+      scrub: true,
+    },
+  });
 });
 
 gsap.to('.capability-item-outer', {
@@ -68,6 +47,56 @@ gsap.to('.capability-item-outer', {
     end: 'bottom bottom',
     scrub: true,
   },
+});
+
+gsap.from('.for-business .heading', {
+  opacity: 0,
+  duration: 2,
+  scrollTrigger: {
+    trigger: '.for-business .header-wrapper',
+    start: 'center center',
+    end: '+=400px center',
+    // scrub: true,
+    pin: true,
+  },
+});
+
+gsap.from('.for-business .content-wrapper', {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: '.for-business .content-wrapper',
+    start: 'top center',
+    end: 'top center',
+  },
+});
+
+const leftItems = document.querySelectorAll('.left-items .item');
+const rightItems = document.querySelectorAll('.right-items .item');
+leftItems.forEach((item) => {
+  gsap.from(item, {
+    opacity: 0,
+    translateX: -100,
+    scrollTrigger: {
+      trigger: item,
+      start: 'top 80%',
+      end: 'bottom 80%',
+      scrub: true,
+      markers: true,
+    },
+  });
+});
+rightItems.forEach((item) => {
+  gsap.from(item, {
+    opacity: 0,
+    translateX: 100,
+    scrollTrigger: {
+      trigger: item,
+      start: 'top 80%',
+      end: 'bottom 80%',
+      scrub: true,
+      markers: true,
+    },
+  });
 });
 
 // start = "top, center" - top of the trigger element, center of viewport
