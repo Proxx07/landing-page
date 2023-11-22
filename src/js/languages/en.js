@@ -6,7 +6,7 @@ export default {
   menu_advantages: 'Advantages',
   menu_business: 'For business',
   menu_customer: 'For the customer',
-  menu_script: 'Scripts',
+  menu_script: 'Use cases',
 
   // text blocks
   text_block_title1: 'Modern solution for biometric identification',

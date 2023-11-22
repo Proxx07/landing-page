@@ -4,17 +4,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import localization from './localization';
 
 localization();
-// const clientsBlockObserve = () => {
-//   // eslint-disable-next-line
-//   const observer = new IntersectionObserver((entries) => {
-//     console.log(entries[0].target);
-//     entries[0].target.querySelector('.video-wrapepr').classList.toggle('fixed');
-//   });
-//   // const forClientsBlock = document.querySelector('.for-clients');
-//   // if (forClientsBlock) observer.observe(forClientsBlock);
-// };
-// clientsBlockObserve();
-
 gsap.registerPlugin(ScrollTrigger);
 gsap.fromTo(
   '.main-heading',
@@ -48,8 +37,8 @@ mainTextBlocks.forEach((item) => {
 gsap.to('.capability-item-outer', {
   opacity: 1,
   translateX: 0,
-  stagger: 1,
-  duration: 10,
+  stagger: 0.5,
+  duration: 2,
   scrollTrigger: {
     trigger: '.capabilities',
     start: 'top center',
@@ -105,6 +94,50 @@ rightItems.forEach((item) => {
   });
 });
 
+/*
+const leftItems = document.querySelectorAll('.left-items .item');
+const rightItems = document.querySelectorAll('.right-items .item');
+gsap
+  .from('.for-business .content-wrapper', {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: '.for-business .content-wrapper',
+      start: 'top center',
+      end: 'top center',
+    },
+  })
+  .then(() => {
+    leftItems.forEach((item, index) => {
+      gsap.to(item, {
+        opacity: 1,
+        translateX: 0,
+        duration: 1,
+        delay: 0.2 * index,
+        // scrollTrigger: {
+        //   trigger: item,
+        //   start: 'top 80%',
+        //   end: 'bottom 80%',
+        //   // scrub: true,
+        // },
+      });
+    });
+    rightItems.forEach((item, index) => {
+      gsap.to(item, {
+        opacity: 1,
+        translateX: 0,
+        duration: 1,
+        delay: 0.2 * index,
+        // scrollTrigger: {
+        //   trigger: item,
+        //   start: 'top 80%',
+        //   end: 'bottom 80%',
+        //   // scrub: true,
+        // },
+      });
+    });
+  });
+*/
+
 gsap.from('.for-clients .section-title', {
   translateX: '-5%',
   opacity: 0,
@@ -116,17 +149,18 @@ gsap.from('.for-clients .section-title', {
   },
 });
 
-const clientCards = document.querySelectorAll('.for-clients .client-cards');
 gsap.from('.for-clients-inner .inner', {
   translateX: '100%',
   scrollTrigger: {
     trigger: '.for-clients-inner',
     start: 'top center',
-    end: '+=1000px center',
+    end: '+=1300px center',
     scrub: true,
     pin: true,
   },
 });
+
+const clientCards = document.querySelectorAll('.for-clients .client-cards');
 gsap.from(clientCards, {
   opacity: 0.3,
   stagger: 1,
@@ -134,7 +168,18 @@ gsap.from(clientCards, {
   scrollTrigger: {
     trigger: '.for-clients-inner',
     start: 'top center',
-    end: '+=750px center',
+    end: '+=1050px center',
+    scrub: true,
+  },
+});
+
+const useCases = document.querySelector('.use-cases');
+gsap.from(useCases, {
+  translateY: '110%',
+  scrollTrigger: {
+    trigger: '.for-clients',
+    start: 'bottom bottom',
+    end: `+=${useCases.offsetHeight - 400} top`,
     scrub: true,
   },
 });

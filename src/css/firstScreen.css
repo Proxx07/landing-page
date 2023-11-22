@@ -9,6 +9,13 @@
   span {
     color: var(--secondary-color);
   }
+
+  @media all and (max-width: 1400px) {
+    --minFontSize: 80;
+    --maxFontSize: 300;
+    font-size: calc(var(--minFontSize) * 1px + (var(--maxFontSize) - var(--minFontSize)) * ((100vw - 375px) / (1920 - 375)));
+    letter-spacing: -6%;
+  }
 }
 
 .header {

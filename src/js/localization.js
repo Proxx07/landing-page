@@ -13,7 +13,7 @@ const localization = () => {
 
     Object.keys(languageKeys).forEach((key) => {
       const item = document.querySelector(`[data-ln=${key}]`);
-      if (process.env.NODE_ENV === 'production' && (!languageKeys[key] || !item)) return;
+      if (!languageKeys[key] || !item) return;
       item.innerHTML = languageKeys[key];
     });
 
