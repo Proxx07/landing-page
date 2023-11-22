@@ -350,6 +350,7 @@ section {
   left: 0;
   right: 0;
   min-height: 101vh;
+  padding-top: 150px;
   .container {
     display: flex;
     flex-direction: column;
