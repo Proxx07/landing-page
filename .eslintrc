@@ -2,6 +2,7 @@
   "extends": ["airbnb/base", "prettier"],
   "plugins": ["prettier"],
   "parser": "babel-eslint",
+
   "globals": {
     "fetch": true,
     "window": true,

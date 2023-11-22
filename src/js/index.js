@@ -4,9 +4,18 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import localization from './localization';
 
 localization();
+// const clientsBlockObserve = () => {
+//   // eslint-disable-next-line
+//   const observer = new IntersectionObserver((entries) => {
+//     console.log(entries[0].target);
+//     entries[0].target.querySelector('.video-wrapepr').classList.toggle('fixed');
+//   });
+//   // const forClientsBlock = document.querySelector('.for-clients');
+//   // if (forClientsBlock) observer.observe(forClientsBlock);
+// };
+// clientsBlockObserve();
 
 gsap.registerPlugin(ScrollTrigger);
-
 gsap.fromTo(
   '.main-heading',
   {
@@ -129,61 +138,3 @@ gsap.from(clientCards, {
     scrub: true,
   },
 });
-
-// start = "top, center" - top of the trigger element, center of viewport
-// const timeline = gsap.timeline();
-// timeline.fromTo(
-//   '.main-heading',
-//   {
-//     y: 70,
-//     opacity: 0,
-//   },
-//   {
-//     y: 0,
-//     opacity: 1,
-//     duration: 1.8,
-//     delay: 1.2,
-//   },
-// ).formTo('next_animating_item'. {}, {});
-
-// gsap.to('.square', {
-//   translateY: 100,
-//   opacity: 1,
-//   duration: 10,
-//   ease: true,
-//   scrollTrigger: {
-//     trigger: '.square',
-//     start: 'top 70%',
-//     end: 'bottom 30%',
-//     markers: true,
-//     scrub: true,
-//     /*
-//       toggleActions = play, pause, resume, restart, reset, complete, none
-//       toggleActions: 'play reverse play reverse', onEnter onLeave onEnterBack onLeaveBack,
-//       toggleActions: 'restart none none none',
-//     */
-//   },
-// });
-
-// const timeline = gsap.timeline();
-// timeline
-//   .to('.main-text-1', {
-//     translateX: 0,
-//     opacity: 1,
-//     scrollTrigger: {
-//       trigger: '.main-text-1',
-//       start: 'top 80%',
-//       end: '20% 50%',
-//       scrub: true,
-//     },
-//   })
-//   .to('.main-text-1', {
-//     translateY: 300,
-//     duration: 10,
-//     scrollTrigger: {
-//       trigger: '.main-text-2',
-//       start: 'top 80%',
-//       end: '80% 50%',
-//       scrub: true,
-//     },
-//   });

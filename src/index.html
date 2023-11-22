@@ -6,7 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <title> The Able Technologies </title>
   <meta name="description" content="Able-ID langing page" />
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="shortcut icon" href="img/favicon/favicon.svg" type="image/x-icon">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,9 +30,11 @@
         <div class="navigation">
           <nav>
             <ul>
-              <li> <a class="menu-item" href="#" data-ln="menu_main">Главная</a> </li>
-              <li> <a class="menu-item" href="#">Able ID</a> </li>
-              <li> <a class="menu-item" href="#">Able Reader</a> </li>
+              <!--
+                <li> <a class="menu-item" href="#" data-ln="menu_main">Главная</a> </li>
+                <li> <a class="menu-item" href="#">Able ID</a> </li>
+                <li> <a class="menu-item" href="#">Able Reader</a> </li>
+              -->
               <li> <a class="menu-item" href="#use-cases" data-ln="menu_connect">Связаться</a> </li>
             </ul>
           </nav>
@@ -41,7 +43,7 @@
             <div class="dropdown lang-buttons">
               <button class="lang-item note-text" data-key="ru">Рус</button>
               <button class="lang-item note-text" data-key="en">En</button>
-              <button class="lang-item note-text" data-key="uz">O'z</button>
+              <!-- <button class="lang-item note-text" data-key="uz">O'z</button> -->
             </div>
           </div>
         </div>
@@ -168,7 +170,7 @@
         </div>
       </div>
     </section>
-    <section class="for-business" id="for-business">
+    <section class="for-business">
       <div class="container inner">
         <div class="header-wrapper flex-center">
           <div class="heading">
@@ -179,6 +181,7 @@
           </div>
         </div>
         <div class="content-wrapper">
+          <div id="for-business" class="anchor"></div>
           <div class="left-items">
             <div class="item">
               <div class="title-smaller" data-ln="for_business_item1_title">
@@ -262,6 +265,16 @@
     </section>
 
     <section class="for-clients" id="for-clients">
+      <div class="video-outer">
+        <div class="video-inner sticky-element">
+          <video src="./img/media/for-clients-video.mp4" autoplay loop muted></video>
+        </div>
+
+        <div style="min-height: 200px"></div>
+        <div style="min-height: 200px"></div>
+        <div style="min-height: 200px"></div>
+        <div style="min-height: 200px"></div>
+      </div>
       <div class="top-empty"></div>
       <div class="container for-clients-inner">
         <h2 class="section-title" data-ln="for_clients_title">Для клиента</h2>
