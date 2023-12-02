@@ -1,7 +1,7 @@
 @import url('normalize.css');
 @import url('global.css');
-
 @import url('firstScreen.css');
+@import url('burger.css');
 
 body {
   background: rgba(1, 2, 9, 1);
@@ -30,6 +30,9 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @media all and (max-width: 960px) {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -37,6 +40,15 @@ section {
   min-height: 100vh;
   padding-bottom: 113px;
   position: relative;
+  @media all and (max-width: 1024px) {
+    max-width: 100vw;
+  }
+}
+
+.main-text-blocks-wrapper {
+  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .main-text-blocks {
@@ -63,6 +75,9 @@ section {
     font-weight: 700;
     line-height: 1.16;
     letter-spacing: -1px;
+    @media all and (max-width: 960px) {
+      font-size: 30px;
+    }
   }
 
   .text {
@@ -93,11 +108,18 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
+    @media all and (max-width: 1200px) {
+      gap: 40px;
+      max-width: 100%;
+    }
+    @media all and (max-width: 960px) {
+      gap: 10px;
+      grid-template-columns: 1fr;
+    }
   }
 
   .capability-item-outer {
     display: flex;
-    justify-content: center;
     @media all and (min-width: 1201px) {
       transform: translateX(-50px);
       opacity: 0;
@@ -117,6 +139,7 @@ section {
       }
     }
     @media all and (max-width: 1200px) {
+      justify-content: center;
     }
   }
 
@@ -135,6 +158,9 @@ section {
   position: relative;
   padding-top: 150px;
   overflow-x: hidden;
+  @media all and (max-width: 960px) {
+    padding-top: 70px;
+  }
   &:before {
     content: '';
     position: absolute;
@@ -244,6 +270,9 @@ section {
         flex-direction: column;
       }
     }
+    @media all and (max-width: 1024px) {
+      padding-top: 0;
+    }
 
     .anchor {
       position: absolute;
@@ -299,6 +328,13 @@ section {
       display: flex;
       flex-direction: column;
       gap: 5px;
+
+      @media all and (max-width: 960px) {
+        text-align: center;
+        .title-smaller {
+          font-size: 20px;
+        }
+      }
     }
   }
 }
@@ -376,16 +412,40 @@ section {
   padding-top: 150px;
   @media all and (max-width: 1200px) {
     position: relative;
+    max-width: 100vw;
+    inset: auto;
   }
+  @media all and (max-width: 960px) {
+    padding-top: 70px;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
     gap: 80px;
+
+    @media all and (max-width: 960px) {
+      display: block;
+      padding-right: 0;
+    }
   }
 
   .section-title {
     text-align: center;
     margin-top: 20px;
+    @media all and (max-width: 960px) {
+      margin-bottom: 40px;
+      padding-right: 30px;
+    }
+  }
+
+  .scrollable-outer {
+    @media all and (max-width: 960px) {
+      width: 100%;
+      overflow: auto;
+      margin-bottom: 20px;
+      margin-right: -29px;
+    }
   }
 
   .inner {
@@ -394,6 +454,9 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    @media all and (max-width: 960px) {
+      grid-template-columns: repeat(3, 300px);
+    }
   }
 
   .item {
@@ -404,6 +467,10 @@ section {
     background: rgba(29, 95, 57, 0.4);
     @media all and (max-width: 1200px) {
       padding: 30px;
+    }
+    @media all and (max-width: 960px) {
+      min-width: 300px;
+      margin-bottom: 20px;
     }
   }
 

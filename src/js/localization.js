@@ -12,9 +12,11 @@ const localization = () => {
     const languageKeys = !languages[ln] ? languages.ru : languages[ln];
 
     Object.keys(languageKeys).forEach((key) => {
-      const item = document.querySelector(`[data-ln=${key}]`);
-      if (!languageKeys[key] || !item) return;
-      item.innerHTML = languageKeys[key];
+      const items = [...document.querySelectorAll(`[data-ln=${key}]`)];
+      if (!languageKeys[key] || !items.length) return;
+      items.forEach((item) => {
+        item.innerHTML = languageKeys[key]; // eslint-disable-line
+      });
     });
 
     currentLang.textContent = [...languageButtons].filter((btn) => btn.dataset.key === ln)[0].textContent; //eslint-disable-line

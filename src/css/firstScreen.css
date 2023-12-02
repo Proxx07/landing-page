@@ -21,7 +21,7 @@
   }
 }
 
-.header {
+header.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -57,13 +57,54 @@
         color: var(--secondary-color);
         border-color: var(--secondary-color);
       }
+
+      &.button {
+        @media all and (max-width: 1024px) {
+          font-size: 0;
+          padding: 0;
+          display: block;
+          width: 24px;
+          height: 37px;
+          background-image: url('../img/phone-icon.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          border: 0;
+        }
+      }
+    }
+  }
+
+  .burger-button {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border: 0;
+    background-image: url('../img/burger-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    @media all and (min-width: 1025px) {
+      display: none;
+    }
+  }
+
+  .language {
+    @media all and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .container {
+    @media all and (max-width: 1024px) {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 100%;
     }
   }
 }
 
 .language {
   --rotate: 0deg;
-
   --visibility: hidden;
   --opacity: 0;
   --ponter-events: none;
@@ -122,7 +163,7 @@
   }
 }
 
-.footer {
+footer.footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -130,11 +171,18 @@
   padding: 30px 0;
   z-index: 1000;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+  @media all and (max-width: 1024px) {
+    padding: 15px 0;
+    text-align: center;
+  }
   .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     row-gap: 20px;
+    @media all and (max-width: 1024px) {
+      justify-content: center;
+    }
   }
 
   nav {
@@ -142,6 +190,9 @@
     border-radius: 100px;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(20px);
+    @media all and (max-width: 1024px) {
+      display: none;
+    }
     ul {
       display: flex;
       align-items: center;
@@ -151,10 +202,18 @@
 
     .menu-item {
       padding: 10px 0;
+      opacity: 0.5;
+      transition: ease 0.3s;
+      &.active {
+        opacity: 1;
+      }
     }
   }
 
   .neotech-copyright {
+    @media all and (max-width: 1024px) {
+      display: none;
+    }
     span {
       opacity: 0.5;
     }

@@ -23,6 +23,9 @@
     </div>
     <header class="header">
       <div class="container inner">
+
+        <button class="burger-button burger-toggle-js"></button>
+
         <a href="/" class="logo">
           <img src="./img/logo.svg" alt="Able-ID">
         </a>
@@ -35,7 +38,7 @@
                 <li> <a class="menu-item" href="#">Able ID</a> </li>
                 <li> <a class="menu-item" href="#">Able Reader</a> </li>
               -->
-              <li> <a class="menu-item" href="#use-cases" data-ln="menu_connect">Связаться</a> </li>
+              <li> <a class="menu-item button" href="#use-cases" data-ln="menu_connect">Связаться</a> </li>
             </ul>
           </nav>
           <div class="language">
@@ -323,44 +326,46 @@
     <section class="use-cases flex-center" id="use-cases">
       <div class="container">
         <h2 class="section-title" data-ln="use_case_title">Сценарии использования</h2>
-        <div class="inner">
-          <div class="item" card-effect>
-            <div class="icon">
-              <img src="./img/use-case-icon1.svg" alt="Icon">
+        <div class="scrollable-outer">
+          <div class="inner">
+            <div class="item" card-effect>
+              <div class="icon">
+                <img src="./img/use-case-icon1.svg" alt="Icon">
+              </div>
+
+              <div class="title-smaller" data-ln="use_case_item1_title">
+                Мобильный оператор
+              </div>
+
+              <div class="section-text" data-ln="use_case_item1_text">
+                Удаленная идентификация при оформлении договора на услуги связи
+              </div>
             </div>
 
-            <div class="title-smaller" data-ln="use_case_item1_title">
-              Мобильный оператор
+            <div class="item" card-effect>
+              <div class="icon">
+                <img src="./img/use-case-icon2.svg" alt="Icon">
+              </div>
+              <div class="title-smaller" data-ln="use_case_item2_title">
+                Банки и финтех продукты
+              </div>
+
+              <div class="section-text" data-ln="use_case_item2_text">
+                Удаленная идентификация при оформлении договора на услуги и банковское обслуживание
+              </div>
             </div>
 
-            <div class="section-text" data-ln="use_case_item1_text">
-              Удаленная идентификация при оформлении договора на услуги связи
-            </div>
-          </div>
+            <div class="item" card-effect>
+              <div class="icon">
+                <img src="./img/use-case-icon3.svg" alt="Icon">
+              </div>
+              <div class="title-smaller" data-ln="use_case_item3_title">
+                Госуслуги
+              </div>
 
-          <div class="item" card-effect>
-            <div class="icon">
-              <img src="./img/use-case-icon2.svg" alt="Icon">
-            </div>
-            <div class="title-smaller" data-ln="use_case_item2_title">
-              Банки и финтех продукты
-            </div>
-
-            <div class="section-text" data-ln="use_case_item2_text">
-              Удаленная идентификация при оформлении договора на услуги и банковское обслуживание
-            </div>
-          </div>
-
-          <div class="item" card-effect>
-            <div class="icon">
-              <img src="./img/use-case-icon3.svg" alt="Icon">
-            </div>
-            <div class="title-smaller" data-ln="use_case_item3_title">
-              Госуслуги
-            </div>
-
-            <div class="section-text" data-ln="use_case_item3_text">
-              Удаленная идентификация при получении государственных услуг
+              <div class="section-text" data-ln="use_case_item3_text">
+                Удаленная идентификация при получении государственных услуг
+              </div>
             </div>
           </div>
         </div>
@@ -383,7 +388,7 @@
         </div>
 
         <nav>
-          <ul>
+          <ul class="footer-menu">
             <li> <a href="#about" class="menu-item" data-ln="menu_about"> О продукте </a> </li>
             <li> <a href="#advantages" class="menu-item" data-ln="menu_advantages"> Преимущества </a> </li>
             <li> <a href="#for-business" class="menu-item" data-ln="menu_business"> Для бизнеса </a> </li>
@@ -400,6 +405,28 @@
         </div>
       </div>
     </footer>
+
+    <div class="burger burger-js">
+      <div class="backdrop burger-toggle-js"></div>
+
+      <div class="inner">
+        <div class="header">
+          <button class="close burger-toggle-js"></button>
+          <img src="./img/logo.svg" alt="Logo">
+          <div style="width: 36px;"></div>
+        </div>
+        <div class="content burger-content-js"></div>
+        <div class="footer">
+          <div class="copyright note-text">
+            The Able Technology ©
+            <span class="current-year" id="current-year2">
+              <script> document.querySelector('#current-year2').innerHTML = new Date().getFullYear() </script>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </body>
 

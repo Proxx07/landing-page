@@ -2,8 +2,22 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import localization from './localization';
+import burgerMenu from './burger';
 
 localization();
+burgerMenu();
+
+const toggleMenuItems = () => {
+  const menuItems = document.querySelectorAll('.footer-menu > li > a');
+  menuItems.forEach((item) => {
+    if (document.location.hash === item.getAttribute('href')) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+};
+window.addEventListener('popstate', toggleMenuItems);
 
 if (window.innerWidth >= 1200) {
   gsap.registerPlugin(ScrollTrigger);
