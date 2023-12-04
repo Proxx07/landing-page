@@ -27,6 +27,13 @@ const burgerMenu = () => {
     const menu = footer.querySelector('.footer-menu');
     const language = document.querySelector('.language');
 
+    const menuItems = menu.querySelectorAll('a');
+    menuItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        toggleBurger();
+      });
+    });
+
     menu.classList.add('menu');
 
     burgerFooter.appendChild(neoTechCopyright);
