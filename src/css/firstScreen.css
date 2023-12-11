@@ -1,5 +1,6 @@
 .main-section {
   padding-top: 84px;
+  margin-bottom: 20px;
 }
 .main-heading {
   color: var(--primary-color);
@@ -157,7 +158,8 @@ header.header {
     transition: ease 0.3s;
     background: transparent;
     color: var(--primary-color);
-    &:hover {
+    &:hover,
+    &.active {
       color: var(--secondary-color);
     }
   }

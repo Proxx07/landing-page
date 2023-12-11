@@ -7,17 +7,32 @@ import burgerMenu from './burger';
 localization();
 burgerMenu();
 
-const toggleMenuItems = () => {
+const toggleMenuItems = (hash) => {
   const menuItems = document.querySelectorAll('.footer-menu > li > a');
+  const locationHash = hash || document.location.hash;
   menuItems.forEach((item) => {
-    if (document.location.hash === item.getAttribute('href')) {
+    if (locationHash === item.getAttribute('href')) {
       item.classList.add('active');
     } else {
       item.classList.remove('active');
     }
   });
 };
-window.addEventListener('popstate', toggleMenuItems);
+
+const sections = document.querySelectorAll('section');
+
+// eslint-disable-next-line
+const observer = new IntersectionObserver((entries) => {
+  if (!entries[0].isIntersecting) return;
+  const sectionID = entries[0].target.getAttribute('id');
+  if (sectionID) {
+    toggleMenuItems(`#${sectionID}`);
+  }
+}, {});
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
 
 if (window.innerWidth >= 1200) {
   gsap.registerPlugin(ScrollTrigger);
@@ -74,7 +89,7 @@ if (window.innerWidth >= 1200) {
     },
   });
 
-  gsap.from('.for-business .content-wrapper', {
+  gsap.from('.for-business .content-wrapper .middle-form', {
     opacity: 0,
     scrollTrigger: {
       trigger: '.for-business .content-wrapper',
@@ -192,6 +207,16 @@ if (window.innerWidth >= 1200) {
   const useCases = document.querySelector('.use-cases');
   gsap.from(useCases, {
     translateY: '110vh',
+    scrollTrigger: {
+      trigger: '.for-clients',
+      start: 'bottom bottom',
+      end: `+=${useCases.offsetHeight - 100} top`,
+      scrub: true,
+    },
+  });
+
+  gsap.to('.for-clients-backdrop', {
+    opacity: 2,
     scrollTrigger: {
       trigger: '.for-clients',
       start: 'bottom bottom',

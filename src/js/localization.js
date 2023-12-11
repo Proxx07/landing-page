@@ -19,7 +19,16 @@ const localization = () => {
       });
     });
 
-    currentLang.textContent = [...languageButtons].filter((btn) => btn.dataset.key === ln)[0].textContent; //eslint-disable-line
+    languageButtons.forEach((languageButton) => {
+      if (languageButton.dataset.key === ln) {
+        currentLang.textContent = languageButton.textContent;
+        languageButton.classList.add('active');
+      } else {
+        languageButton.classList.remove('active');
+      }
+    });
+
+    // currentLang.textContent = [...languageButtons].filter((btn) => btn.dataset.key === ln)[0].textContent; //eslint-disable-line
   };
 
   document.addEventListener('click', (event) => {

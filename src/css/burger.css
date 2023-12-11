@@ -151,6 +151,9 @@
       &:not(:hover) {
         color: rgba(255, 255, 255, 0.5);
       }
+      &.active {
+        color: var(--secondary-color);
+      }
     }
 
     .dropdown {
