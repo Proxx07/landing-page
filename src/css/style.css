@@ -161,6 +161,7 @@ section {
   position: relative;
   padding-top: 150px;
   overflow-x: hidden;
+  padding-bottom: 0;
   @media all and (max-width: 960px) {
     padding-top: 70px;
   }
@@ -215,6 +216,7 @@ section {
     position: relative;
     min-height: 800px;
     padding-top: 100px;
+    padding-bottom: 113px;
     @media all and (max-width: 1600px) {
       grid-template-columns: auto 350px auto;
       gap: 30px;
