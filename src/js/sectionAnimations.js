@@ -128,8 +128,9 @@ if (window.innerWidth >= 1200) {
   });
 
   const useCases = document.querySelector('.use-cases');
-  gsap.from(useCases, {
-    translateY: '110vh',
+
+  gsap.to(useCases, {
+    translateY: '0%',
     scrollTrigger: {
       trigger: '.for-clients',
       start: 'bottom bottom',
