@@ -2,6 +2,7 @@
 import localization from './localization';
 import burgerMenu from './burger';
 import './sectionAnimations.js';
+import './popup.js';
 
 localization();
 burgerMenu();

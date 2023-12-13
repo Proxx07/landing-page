@@ -1,0 +1,69 @@
+.popup-modal {
+  --pointer-events: none;
+  --backdrop-bg: rgba(0, 0, 0, 0.8);
+  --animation-transition: ease 0.4s;
+  --content-bg: rgb(0, 0, 0);
+
+  --opacity: 0;
+  --visibility: hidden;
+  --transform-scale: 0.9;
+
+  position: fixed;
+  inset: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  pointer-events: var(--pointer-events);
+
+  &.open {
+    z-index: 1000;
+    --visibility: visible;
+    --opacity: 1;
+    --pointer-events: all;
+    --transform-scale: 1;
+  }
+
+  .backdrop {
+    position: absolute;
+    inset: 0;
+    background: var(--backdrop-bg);
+    transition: var(--animation-transition);
+    visibility: var(--visibility);
+    opacity: var(--opacity);
+    /* backdrop-filter: blur(35px); */
+  }
+
+  .inner {
+    max-height: 100%;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .body {
+    background: var(--content-bg);
+    position: relative;
+    padding: 40px 20px;
+    transition: var(--animation-transition);
+    opacity: var(--opacity);
+    transform: scale(var(--transform-scale));
+    animation-delay: 0.2s;
+    border-radius: 10px;
+  }
+
+  .title {
+    padding: 0 0 10px;
+    font-size: 25px;
+  }
+
+  .close {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: url('../img/close.svg') 50% 50% / auto no-repeat;
+  }
+}

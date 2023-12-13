@@ -38,7 +38,12 @@
                 <li> <a class="menu-item" href="#">Able ID</a> </li>
                 <li> <a class="menu-item" href="#">Able Reader</a> </li>
               -->
-              <li> <a class="menu-item button" href="#use-cases" data-ln="menu_connect">Связаться</a> </li>
+              <li>
+                <button class="menu-item popup-trigger-btn" data-ln="menu_connect" data-target="popup-form">
+                  Связаться
+                </button>
+                <!-- <a class="menu-item button" href="#use-cases" data-ln="menu_connect">Связаться</a>  -->
+              </li>
             </ul>
           </nav>
           <div class="language">
@@ -372,7 +377,7 @@
           </div>
         </div>
         <div class="button-wrappe flex-center">
-          <button class="button" data-ln="contact_us">
+          <button class="button popup-trigger-btn" data-ln="contact_us" data-target="popup-form">
             Связаться с нами
           </button>
         </div>
@@ -428,6 +433,15 @@
       </div>
     </div>
 
+    <div class="popup-modal" id="popup-form">
+      <div class="backdrop"></div>
+      <div class="inner">
+        <div class="body">
+          <div class="close"></div>
+          <div class="title">Form title</div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 

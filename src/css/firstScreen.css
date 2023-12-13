@@ -54,23 +54,26 @@ header.header {
       border: 1px solid transparent;
       transition: ease 0.3s;
       border-radius: 50px;
+      background: none;
+      cursor: pointer;
+      color: var(--primary-color);
       &:hover {
         color: var(--secondary-color);
         border-color: var(--secondary-color);
       }
+    }
 
-      &.button {
-        @media all and (max-width: 1024px) {
-          font-size: 0;
-          padding: 0;
-          display: block;
-          width: 24px;
-          height: 37px;
-          background-image: url('../img/phone-icon.svg');
-          background-repeat: no-repeat;
-          background-position: center;
-          border: 0;
-        }
+    button.menu-item {
+      @media all and (max-width: 1024px) {
+        font-size: 0;
+        padding: 0;
+        display: block;
+        width: 24px;
+        height: 37px;
+        background-image: url('../img/phone-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 0;
       }
     }
   }

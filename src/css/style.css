@@ -2,6 +2,7 @@
 @import url('global.css');
 @import url('firstScreen.css');
 @import url('burger.css');
+@import url('popup.css');
 
 body {
   background: rgba(1, 2, 9, 1);
@@ -177,6 +178,7 @@ section {
     opacity: 0.3;
     pointer-events: none;
   }
+
   .inner {
     width: 100%;
     margin: 0 auto;
@@ -419,7 +421,6 @@ section {
   border-radius: 20px 20px 0 0;
   min-height: 101vh;
   padding-top: 150px;
-  z-index: 10;
 
   @media all and (min-width: 1201px) {
     transform: translateY(105%);
@@ -428,6 +429,7 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 10;
   }
 
   @media all and (max-width: 1200px) {
