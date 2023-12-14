@@ -104,37 +104,24 @@ if (window.innerWidth >= 1200) {
   });
 
   gsap.from('.for-clients-inner .inner', {
-    translateX: '100%',
+    translateX: '105%',
     scrollTrigger: {
-      trigger: '.for-clients-inner',
-      start: 'top center',
-      end: '+=1300px center',
+      trigger: '.for-clients',
+      start: '10% center',
+      end: '50%, center',
       scrub: true,
-      pin: true,
     },
   });
 
   const clientCards = document.querySelectorAll('.for-clients .client-cards');
   gsap.from(clientCards, {
-    opacity: 0.3,
+    opacity: 0.2,
     stagger: 1,
     ease: 'ease',
     scrollTrigger: {
       trigger: '.for-clients-inner',
-      start: 'top center',
-      end: '+=1050px center',
-      scrub: true,
-    },
-  });
-
-  const useCases = document.querySelector('.use-cases');
-
-  gsap.to(useCases, {
-    translateY: '0%',
-    scrollTrigger: {
-      trigger: '.for-clients',
-      start: 'bottom bottom',
-      end: `+=${useCases.offsetHeight - 100} top`,
+      start: '-20% center',
+      end: '+=1000px 90%',
       scrub: true,
     },
   });
@@ -150,11 +137,11 @@ if (window.innerWidth >= 1200) {
   });
 
   gsap.to('.for-clients-backdrop', {
-    opacity: 1.2,
+    opacity: 1,
     scrollTrigger: {
-      trigger: '.for-clients',
-      start: 'bottom bottom',
-      end: `bottom top`,
+      trigger: '.use-cases',
+      start: 'top bottom',
+      end: 'center bottom',
       scrub: true,
     },
   });

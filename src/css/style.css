@@ -365,13 +365,36 @@ section {
   }
 }
 
+.for-clients-sticky-wrapper {
+  @media all and (min-width: 1201px) {
+    min-height: 300vh;
+  }
+}
+
+.for-clients-sticky-block {
+  position: sticky;
+  top: -80px;
+  min-height: 100vh;
+  @media all and (max-width: 1200px) {
+    position: relative;
+    top: auto;
+    min-height: 0;
+    padding-top: 50vh;
+  }
+  display: flex;
+  align-items: flex-end;
+}
+
 .for-clients {
   position: relative;
   background-color: #000;
+  @media all and (min-width: 1201px) {
+    margin-bottom: -100vh;
+  }
   .for-clients-backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 1;
     opacity: 0;
     pointer-events: none;
@@ -383,6 +406,9 @@ section {
     justify-content: center;
     align-items: flex-start;
     .video-inner {
+      position: sticky;
+      top: 0;
+
       min-height: 100vh;
       width: 100%;
       display: flex;
@@ -438,18 +464,9 @@ section {
 .use-cases {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('../img/use-cases-bg.png'), lightgray 50% / cover no-repeat;
   border-radius: 20px 20px 0 0;
-  min-height: 101vh;
+  min-height: 100vh;
   padding-top: 150px;
-
-  @media all and (min-width: 1201px) {
-    transform: translateY(105%);
-    will-change: transform;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
+  z-index: 2;
 
   @media all and (max-width: 1200px) {
     position: relative;
@@ -529,9 +546,4 @@ section {
     line-height: 1.5;
     cursor: pointer;
   }
-}
-
-.sticky-element {
-  position: sticky;
-  top: 0;
 }
