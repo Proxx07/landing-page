@@ -165,7 +165,7 @@ section {
 
   @media all and (min-width: 1201px) {
     min-height: 300vh;
-    margin-bottom: -800px;
+    margin-bottom: -900px;
   }
   @media all and (max-width: 960px) {
     padding-top: 70px;

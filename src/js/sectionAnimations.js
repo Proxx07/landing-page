@@ -130,7 +130,7 @@ if (window.innerWidth >= 1200) {
     opacity: 1,
     scrollTrigger: {
       trigger: '.for-clients',
-      start: 'top bottom',
+      start: '100px bottom',
       end: `300px center`,
       scrub: true,
     },
