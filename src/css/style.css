@@ -162,6 +162,7 @@ section {
   position: relative;
   padding-top: 150px;
   padding-bottom: 0;
+
   @media all and (min-width: 1201px) {
     min-height: 300vh;
     margin-bottom: -800px;
@@ -180,6 +181,14 @@ section {
     background-attachment: fixed;
     opacity: 0.3;
     pointer-events: none;
+  }
+
+  .for-business-backdrop {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0;
   }
 
   .inner {

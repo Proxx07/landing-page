@@ -139,6 +139,16 @@ if (window.innerWidth >= 1200) {
     },
   });
 
+  gsap.to('.for-business-backdrop', {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: '.for-clients',
+      start: 'top bottom',
+      end: `300px center`,
+      scrub: true,
+    },
+  });
+
   gsap.to('.for-clients-backdrop', {
     opacity: 1.2,
     scrollTrigger: {
