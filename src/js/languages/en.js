@@ -11,10 +11,16 @@ export default {
   // text blocks
   text_block_title1: 'Modern solution for biometric identification',
   text_block_text1: 'Camera of a mobile device or personal computer',
-  text_block_text2:
-    '<p> Identification and verification from any type of device (PC, tablet, smartphone), in a web browser and in a mobile application </p> <p> Provides burglary resistance and “Liveness” vitality check </p> <p> Reduces the risk of fraud </p>',
-  text_block_title3: "Biometric verification is the fastest and most reliable way to confirm a user's identity and protect your business from fraud",
-  text_block_text3: 'With the solution, you can be sure that the client really is who he says he is, and that the claimed identity is associated with a real person',
+  text_block_title2: 'Identification and verification with devices of any type',
+  text_block_text2: `
+  <p> PC, tablet, smartphone, in the web browser and in mobile applications </p>
+  <p> Provides burglary resistance and Vitality check </p>
+  <p> Reduces the risk of fraud </p>`,
+
+  text_block_title3: 'Biometric verification',
+  text_block_text3: `
+    <p>The fastest and most reliable way to verify a user's identity and protect your business from fraud.</p>
+    <p>With the solution, you can be sure that the client is who he says he is and that the claimed identity is associated with a real person.</p>`,
 
   // capabilities
   capability_1: 'Face verification with a computer or mobile device camera',
