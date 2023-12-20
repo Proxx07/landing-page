@@ -107,8 +107,9 @@ p {
 
 [card-effect] {
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(35px);
+  background: rgba(255, 255, 255, 0.7);
+  /* background: rgba(255, 255, 255, 0.1); */
+  /* backdrop-filter: blur(35px); */
   @media all and (max-width: 1200px) {
     padding: 35px;
   }
