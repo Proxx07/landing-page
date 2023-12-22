@@ -45,7 +45,7 @@ export default {
   for_business_item2_text: 'Надёжное шифрование чувствительных данных',
   for_business_item3_title: 'Скорость',
   for_business_item3_text: 'Сопоставление лица и проверка личности выполняются за считанные секунды',
-  for_business_item4_title: 'Отказоустойчивость',
+  for_business_item4_title: 'Отказ-устойчивость',
   for_business_item4_text: 'Высокий SLA обеспечивающий двукратную резервацию вычислительных мощностей',
   for_business_item5_title: 'Поддержка',
   for_business_item5_text: 'Решение любых технических вопросов в кратчайшие сроки',

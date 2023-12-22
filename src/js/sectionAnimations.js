@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-if (window.innerWidth >= 1200) {
+if (window.innerWidth >= 1280) {
   gsap.registerPlugin(ScrollTrigger);
   gsap.fromTo(
     '.main-heading',
@@ -51,7 +51,8 @@ if (window.innerWidth >= 1200) {
     scrollTrigger: {
       trigger: '.for-business .header-wrapper',
       start: 'center center',
-      end: '+=400px center',
+      // end: '+=400px center',
+      end: '+=50% center',
       pin: true,
     },
   });
