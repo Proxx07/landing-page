@@ -549,6 +549,7 @@ section {
     justify-content: center;
     .title-smaller {
       word-break: break-word;
+      font-size: 29px;
     }
     @media all and (max-width: 1360px) {
       padding: 20px;
