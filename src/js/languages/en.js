@@ -69,6 +69,14 @@ export default {
   use_case_item3_title: 'Government services',
   use_case_item3_text: 'Remote identification when receiving government services',
 
+  // callback_form
+  callback_form_title: 'Feedback form',
+  callback_form_tel: 'Phone number',
+  callback_form_email: 'E-mail',
+  callback_form_comment: 'Your message',
+  callback_form_button: 'Send',
+  callback_form_footer_title: 'Contacts',
+
   contact_us: 'Contact us',
   developed_in: 'Developed in',
 };

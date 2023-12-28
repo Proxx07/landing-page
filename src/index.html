@@ -443,7 +443,44 @@
       <div class="inner">
         <div class="body">
           <div class="close"></div>
-          <div class="title">Form title</div>
+          <div class="title">
+            <img src="./img/logo-black.svg" alt="Able-ID">
+            <span data-ln="callback_form_title">Форма обратной связи</span>
+          </div>
+
+          <form class="callback-form">
+            <label for="form-text">
+              <input type="tel" name="form-text" data-ln="callback_form_tel" placeholder="Номер телефона" required
+                value="" />
+            </label>
+
+            <label for="form-mail">
+              <input type="email" name="form-email" data-ln="callback_form_email" placeholder="E-mail" required
+                value="" />
+            </label>
+
+            <label for="form-comment">
+              <textarea name="form-comment" data-ln="callback_form_comment" placeholder="Ваше сообщение"></textarea>
+            </label>
+
+            <button type="submit" data-ln="callback_form_button" class="callback-form__button">
+              Отправить
+            </button>
+          </form>
+
+          <div class="form-footer">
+            <div class="form-footer-title" data-ln="callback_form_footer_title">Контакты</div>
+
+            <div class="form-footer-bottom">
+              <a href="tel:+998334041717" class="phone">
+                +998(33)404-17-17
+              </a>
+
+              <a href="mailto:info@theable.tech" class="mail">
+                info@theable.tech
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

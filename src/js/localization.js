@@ -15,7 +15,11 @@ const localization = () => {
       const items = [...document.querySelectorAll(`[data-ln=${key}]`)];
       if (!languageKeys[key] || !items.length) return;
       items.forEach((item) => {
-        item.innerHTML = languageKeys[key]; // eslint-disable-line
+        if (item.tagName === 'TEXTAREA' || item.tagName === 'INPUT') {
+          item.setAttribute('placeholder', languageKeys[key]);
+        } else {
+          item.innerHTML = languageKeys[key]; // eslint-disable-line
+        }
       });
     });
 

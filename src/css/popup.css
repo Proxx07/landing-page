@@ -2,7 +2,7 @@
   --pointer-events: none;
   --backdrop-bg: rgba(0, 0, 0, 0.8);
   --animation-transition: ease 0.4s;
-  --content-bg: rgb(0, 0, 0);
+  --content-bg: rgb(255, 255, 255);
 
   --opacity: 0;
   --visibility: hidden;
@@ -37,33 +37,87 @@
 
   .inner {
     max-height: 100%;
-    max-width: 400px;
+    max-width: 480px;
     width: 100%;
   }
 
   .body {
     background: var(--content-bg);
     position: relative;
-    padding: 40px 20px;
+    padding: 30px;
     transition: var(--animation-transition);
     opacity: var(--opacity);
     transform: scale(var(--transform-scale));
     animation-delay: 0.2s;
     border-radius: 10px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media all and (max-width: 640px) {
+      padding: 20px;
+    }
   }
 
   .title {
-    padding: 0 0 10px;
-    font-size: 25px;
+    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    gap: 20px;
+    img {
+      max-width: 167px;
+    }
+    @media all and (max-width: 640px) {
+      font-size: 20px;
+    }
   }
 
   .close {
     cursor: pointer;
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 30px;
+    top: 30px;
     width: 20px;
     height: 20px;
     background: url('../img/close.svg') 50% 50% / auto no-repeat;
+  }
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  .form-footer-title {
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+
+  .form-footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 15px;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      line-height: 1.5;
+      color: inherit;
+      padding-left: 39px;
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: 24px auto;
+      &.phone {
+        background-image: url('../img/callback-icon.svg');
+      }
+
+      &.mail {
+        background-image: url('../img/mail-icon.svg');
+      }
+    }
   }
 }

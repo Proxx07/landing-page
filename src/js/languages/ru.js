@@ -63,6 +63,7 @@ export default {
   for_clients_item4_title: 'Конфиденциально',
   for_clients_item4_text: 'Информация не передается третьим лицам',
 
+  // use_cases
   use_case_title: 'Сценарии использования',
   use_case_item1_title: 'Мобильный оператор',
   use_case_item1_text: 'Удаленная идентификация при оформлении договора на услуги связи',
@@ -70,6 +71,14 @@ export default {
   use_case_item2_text: 'Удаленная идентификация при оформлении договора на услуги и  банковское обслуживание',
   use_case_item3_title: 'Госуслуги',
   use_case_item3_text: 'Удаленная идентификация при получении государственных услуг',
+
+  // callback_form
+  callback_form_title: 'Форма обратной связи',
+  callback_form_tel: 'Номер телефона',
+  callback_form_email: 'E-mail',
+  callback_form_comment: 'Ваше сообщение',
+  callback_form_button: 'Отправить',
+  callback_form_footer_title: 'Контакты',
 
   contact_us: 'Связаться с нами',
   developed_in: 'Разработано в',
