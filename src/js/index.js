@@ -28,3 +28,16 @@ const observer = new IntersectionObserver((entries) => {
   }
 });
 sections.forEach((section) => observer.observe(section));
+
+const form = document.querySelector('.callback-form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const fields = {};
+
+  form.querySelectorAll('[name]').forEach((field) => {
+    fields[field.attributes.name.value] = field.value;
+  });
+
+  console.log(fields);
+});
