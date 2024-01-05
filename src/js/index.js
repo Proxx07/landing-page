@@ -38,6 +38,4 @@ form.addEventListener('submit', (event) => {
   form.querySelectorAll('[name]').forEach((field) => {
     fields[field.attributes.name.value] = field.value;
   });
-
-  console.log(fields);
 });

@@ -9,6 +9,13 @@ module.exports = {
   target: 'web',
   context: path.resolve(__dirname, 'src'),
   entry: ['./js/index.js', './css/style.css'],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '~': path.resolve(__dirname, '.'),
+    },
+  },
+
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: 'js/[name].js',
