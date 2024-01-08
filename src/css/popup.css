@@ -16,9 +16,9 @@
   justify-content: center;
   overflow: auto;
   pointer-events: var(--pointer-events);
+  z-index: 1000;
 
   &.open {
-    z-index: 1000;
     --visibility: visible;
     --opacity: 1;
     --pointer-events: all;
