@@ -287,46 +287,50 @@
 
       <div class="for-clients-sticky-wrapper">
         <div class="for-clients-sticky-block">
-          <div class="container for-clients-inner">
-            <h2 class="section-title" data-ln="for_clients_title">Для клиента</h2>
-            <div class="inner">
-              <div class="client-cards" card-effect>
-                <div class="title-smaller" data-ln="for_clients_item1_title">
-                  Быстро 
+          <div class="for-clients-inner">
+            <div class="container">
+              <h2 class="section-title" data-ln="for_clients_title">Для клиента</h2>
+            </div>
+            <div class="inner-outer">
+              <div class="inner">
+                <div class="client-cards" card-effect>
+                  <div class="title-smaller" data-ln="for_clients_item1_title">
+                    Быстро 
+                  </div>
+
+                  <div class="section-text" data-ln="for_clients_item1_text">
+                    Достаточно отсканировать лицо камерой компьютера или мобильного устройства
+                  </div>
                 </div>
 
-                <div class="section-text" data-ln="for_clients_item1_text">
-                  Достаточно отсканировать лицо камерой компьютера или мобильного устройства
-                </div>
-              </div>
+                <div class="client-cards" card-effect>
+                  <div class="title-smaller" data-ln="for_clients_item2_title">
+                    Удобно
+                  </div>
 
-              <div class="client-cards" card-effect>
-                <div class="title-smaller" data-ln="for_clients_item2_title">
-                  Удобно
-                </div>
-
-                <div class="section-text" data-ln="for_clients_item2_text">
-                  Не нужно посещать другие инстанции и собирать дополнительные документы
-                </div>
-              </div>
-
-              <div class="client-cards" card-effect>
-                <div class="title-smaller" data-ln="for_clients_item3_title">
-                  Без бюрократии
+                  <div class="section-text" data-ln="for_clients_item2_text">
+                    Не нужно посещать другие инстанции и собирать дополнительные документы
+                  </div>
                 </div>
 
-                <div class="section-text" data-ln="for_clients_item3_text">
-                  Не нужны справки для подтверждения личности
-                </div>
-              </div>
+                <div class="client-cards" card-effect>
+                  <div class="title-smaller" data-ln="for_clients_item3_title">
+                    Без бюрократии
+                  </div>
 
-              <div class="client-cards" card-effect>
-                <div class="title-smaller" data-ln="for_clients_item4_title">
-                  Конфиденциально
+                  <div class="section-text" data-ln="for_clients_item3_text">
+                    Не нужны справки для подтверждения личности
+                  </div>
                 </div>
 
-                <div class="section-text" data-ln="for_clients_item4_text">
-                  Информация не передается третьим лицам
+                <div class="client-cards" card-effect>
+                  <div class="title-smaller" data-ln="for_clients_item4_title">
+                    Конфиденциально
+                  </div>
+
+                  <div class="section-text" data-ln="for_clients_item4_text">
+                    Информация не передается третьим лицам
+                  </div>
                 </div>
               </div>
             </div>
@@ -450,16 +454,18 @@
 
           <form class="callback-form">
             <label for="phone">
-              <input type="tel" name="phone" data-ln="callback_form_tel" placeholder="Номер телефона" required
-                value="" />
+              <input id="phone" type="tel" name="phone" data-ln="callback_form_tel" placeholder="Номер телефона"
+                required autocomplete="tel" value="" />
             </label>
 
             <label for="email">
-              <input type="email" name="email" data-ln="callback_form_email" placeholder="E-mail" required value="" />
+              <input id="email" type="email" name="email" data-ln="callback_form_email" placeholder="E-mail" required
+                autocomplete="email" value="" />
             </label>
 
             <label for="comment">
-              <textarea name="comment" data-ln="callback_form_comment" placeholder="Ваше сообщение"></textarea>
+              <textarea id="comment" name="comment" data-ln="callback_form_comment"
+                placeholder="Ваше сообщение"></textarea>
             </label>
 
             <button type="submit" data-ln="callback_form_button" class="callback-form__button">
@@ -487,15 +493,17 @@
 </body>
 
 <!-- Google Analytics -->
-<script>
-  window.ga = window.ga || function () {
-    (ga.q = ga.q || []).push(arguments)
-  };
-  ga.l = +new Date;
-  ga('create', 'UA-XXXXX-Y', 'auto');
-  ga('send', 'pageview');
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!--
+  <script>
+    window.ga = window.ga || function () {
+      (ga.q = ga.q || []).push(arguments)
+    };
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+-->
 <!-- End Google Analytics -->
 
 </html>

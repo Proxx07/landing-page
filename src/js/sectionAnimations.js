@@ -104,27 +104,35 @@ if (window.innerWidth >= 1280) {
     },
   });
 
-  gsap.from('.for-clients-inner .inner', {
-    translateX: '105%',
+  const clientsInner = document.querySelector('.for-clients-inner .inner');
+  clientsInner.setAttribute('style', `--width: ${clientsInner.clientWidth}px`);
+  gsap.to(clientsInner, {
+    translateX: clientsInner.clientWidth * -1,
     scrollTrigger: {
       trigger: '.for-clients',
       start: '10% center',
-      end: '50%, center',
+      end: '80%, center',
       scrub: true,
     },
   });
 
   const clientCards = document.querySelectorAll('.for-clients .client-cards');
-  gsap.from(clientCards, {
-    opacity: 0.2,
-    stagger: 1,
-    ease: 'ease',
+  const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: '.for-clients-inner',
-      start: '-20% center',
-      end: '+=1000px 90%',
+      trigger: '.for-clients',
+      start: '18% center',
+      end: '50%, center',
       scrub: true,
     },
+  });
+
+  tl.to(clientCards, {
+    stagger: 1,
+    opacity: 1,
+  });
+  tl.to(clientCards, {
+    stagger: 1,
+    opacity: 0.2,
   });
 
   gsap.to('.for-business-backdrop', {
