@@ -515,6 +515,8 @@ section {
     justify-content: flex-end;
     overflow-x: hidden;
     max-width: 100vw;
+    width: 100%;
+
     @media (min-width: 1201px) and (max-width: 1360px) {
       padding-bottom: 40px;
     }
@@ -530,7 +532,9 @@ section {
 
   .inner-outer {
     overflow: hidden;
-    max-width: 100%;
+    @media all and (min-width: 1280px) {
+      max-width: 100%;
+    }
   }
 
   .inner {
@@ -555,20 +559,24 @@ section {
     flex-direction: column;
     gap: 5px;
     justify-content: center;
-    opacity: 0.2;
-    transition: linear 0.1s;
     .title-smaller {
-      /* word-break: break-word; */
-      font-size: 29px;
+      font-size: 30px;
     }
-    @media all and (min-width: 1281px) {
+    @media all and (min-width: 1280px) {
+      opacity: 0.2;
+      transition: linear 0.1s;
       min-width: 450px;
     }
     @media all and (max-width: 1360px) {
-      padding: 20px;
+      padding: 30px;
       .title-smaller {
         font-size: 20px;
       }
+    }
+
+    @media all and (max-width: 960px) {
+      text-align: center;
+      padding: 20px;
     }
   }
 }
