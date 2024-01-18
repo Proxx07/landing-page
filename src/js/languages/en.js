@@ -27,7 +27,7 @@ export default {
   capability_2: 'User identification by PINFL',
   capability_3: 'Detection of glare, shadows, and face position for human identification',
   capability_4: 'Analytics and statistics on biometric data and devices',
-  capability_5: 'Easy integration via AbleID API or SDK',
+  capability_5: 'Easy integration via AbleID API',
   capability_6: 'Conducts checks against government databases',
 
   // for business
