@@ -201,7 +201,7 @@ section {
   }
 
   @media all and (max-width: 1360px) {
-    min-height: 288vh;
+    min-height: 280vh;
   }
 
   @media (min-width: 1280px) and (max-height: 779px) {
