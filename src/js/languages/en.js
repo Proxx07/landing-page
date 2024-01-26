@@ -74,6 +74,11 @@ export default {
   callback_form_tel: 'Phone number',
   callback_form_email: 'Email',
   callback_form_comment: 'Your message',
+
+  callback_form_subject: 'Select the subject of the request',
+  callback_form_subject_1: 'Offer',
+  callback_form_subject_0: 'Complaint',
+
   callback_form_button: 'Send',
   callback_form_footer_title: 'Contacts',
   callback_form_succes: 'Request has been sent!',

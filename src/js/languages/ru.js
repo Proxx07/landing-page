@@ -76,6 +76,11 @@ export default {
   callback_form_tel: 'Номер телефона',
   callback_form_email: 'E-mail',
   callback_form_comment: 'Ваше сообщение',
+
+  callback_form_subject: 'Выберите тему обращения',
+  callback_form_subject_1: 'Предложение',
+  callback_form_subject_0: 'Жалоба',
+
   callback_form_button: 'Отправить',
   callback_form_footer_title: 'Контакты',
   callback_form_succes: 'Ваша заявка отправлена!',

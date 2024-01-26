@@ -76,11 +76,16 @@ export default {
   callback_form_tel: 'Telefon raqami',
   callback_form_email: 'E-mail',
   callback_form_comment: 'Sizning xabaringiz',
+
+  callback_form_subject: 'Murojat mavzusini tanlang',
+  callback_form_subject_1: 'Taklif',
+  callback_form_subject_0: 'Shikoyat',
+
   callback_form_button: "Jo'natish",
   callback_form_footer_title: 'Kontaktlar',
   callback_form_succes: 'Sizning arizangiz yuborildi!',
   callback_form_error: 'Sizning arizangiz yuborilmadi!',
 
   contact_us: "Biz bilan bog'lanish",
-  developed_in: 'Ishlab chiqorilgan',
+  developed_in: 'Ishlab chiqarilgan',
 };
