@@ -76,6 +76,8 @@ export default {
   callback_form_comment: 'Your message',
   callback_form_button: 'Send',
   callback_form_footer_title: 'Contacts',
+  callback_form_succes: 'Request has been sent!',
+  callback_form_error: 'Request not sent!',
 
   contact_us: 'Contact us',
   developed_in: 'Designed in',

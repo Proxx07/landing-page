@@ -78,6 +78,8 @@ export default {
   callback_form_comment: 'Ваше сообщение',
   callback_form_button: 'Отправить',
   callback_form_footer_title: 'Контакты',
+  callback_form_succes: 'Ваша заявка отправлена!',
+  callback_form_error: 'Заявка не отправлена!',
 
   contact_us: 'Связаться с нами',
   developed_in: 'Разработано в',

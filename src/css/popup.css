@@ -17,8 +17,6 @@
   overflow: auto;
   pointer-events: var(--pointer-events);
   z-index: 1000;
-  opacity: var(--opacity);
-  visibility: var(--visibility);
 
   &.open {
     --visibility: visible;
