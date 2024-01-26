@@ -18,7 +18,8 @@
     "last 5 versions"
   ],
   "dependencies": {
-    "gsap": "^3.12.2"
+    "gsap": "^3.12.2",
+    "imask": "^7.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

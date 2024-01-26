@@ -17,6 +17,8 @@
   overflow: auto;
   pointer-events: var(--pointer-events);
   z-index: 1000;
+  opacity: var(--opacity);
+  visibility: var(--visibility);
 
   &.open {
     --visibility: visible;
@@ -119,5 +121,78 @@
         background-image: url('../img/mail-icon.svg');
       }
     }
+  }
+}
+
+.form-wrapper {
+  position: relative;
+  &.loading {
+    pointer-events: none;
+    .callback-form__button {
+      position: relative;
+      color: transparent;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: calc(50% - 10px);
+        left: calc(50% - 10px);
+        border-radius: 50%;
+        border: 2px solid #fff;
+        border-top: 2px solid transparent;
+        animation: rotate 0.8s infinite linear;
+      }
+    }
+  }
+
+  .result-wrapper {
+    display: none;
+    padding-bottom: 20px;
+  }
+
+  &.success {
+    .form-success {
+      display: flex;
+    }
+    .callback-form {
+      display: none;
+    }
+    .result-wrapper {
+      display: block;
+    }
+  }
+
+  &.error {
+    .form-error {
+      display: flex;
+    }
+    .result-wrapper {
+      display: block;
+    }
+  }
+
+  .error-wrapper {
+    .error-list {
+      padding-left: 68px;
+      color: #f1604d;
+    }
+  }
+
+  .form-success,
+  .form-error {
+    display: none;
+    align-items: center;
+    gap: 16px;
+    color: #000;
+    svg {
+      width: 50px;
+    }
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
   }
 }

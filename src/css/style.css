@@ -533,7 +533,7 @@ section {
   .inner-outer {
     overflow: hidden;
     @media all and (min-width: 1280px) {
-      max-width: 100%;
+      max-width: 99vw;
     }
   }
 
