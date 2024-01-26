@@ -8,8 +8,8 @@ const localization = () => {
   const languageButtons = language.querySelectorAll('.lang-buttons button');
 
   const changeLanguages = () => {
-    const ln = localStorage.getItem('lang') || 'ru';
-    const languageKeys = !languages[ln] ? languages.ru : languages[ln];
+    const ln = localStorage.getItem('lang') || 'uz';
+    const languageKeys = !languages[ln] ? languages.uz : languages[ln];
 
     Object.keys(languageKeys).forEach((key) => {
       const items = [...document.querySelectorAll(`[data-ln=${key}]`)];
@@ -52,7 +52,7 @@ const localization = () => {
     });
   });
 
-  if (localStorage.getItem('lang') !== 'ru') {
+  if (localStorage.getItem('lang') !== 'uz') {
     changeLanguages();
   }
 };
