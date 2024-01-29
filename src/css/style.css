@@ -3,6 +3,7 @@
 @import url('firstScreen.css');
 @import url('burger.css');
 @import url('popup.css');
+@import url('formStyles.css');
 
 body {
   background: rgba(1, 2, 9, 1);

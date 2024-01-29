@@ -4,6 +4,7 @@ import burgerMenu from './burger';
 import './sectionAnimations.js';
 import './popup.js';
 import $request from './request.js';
+import MySelect from './select.js';
 
 localization();
 burgerMenu();
@@ -36,10 +37,11 @@ const form = formWrapper.querySelector('.callback-form');
 const errorsList = formWrapper.querySelector('.error-list');
 
 const phoneField = form.querySelector('[name="phone"]');
-const maskOptions = {
-  mask: '+{998}(00)000-00-00',
-};
+const maskOptions = { mask: '+{998}(00)000-00-00' };
 const mask = IMask(phoneField, maskOptions);
+
+const select = new MySelect(document.querySelector('.select-field'));
+select.init();
 
 phoneField.addEventListener('keyup', () => {
   if (!phoneField.value) phoneField.value = '+998';
@@ -78,7 +80,7 @@ form.addEventListener('submit', async (event) => {
     formWrapper.classList.remove('success');
     formWrapper.classList.add('error');
 
-    const list = result.message.map((str) => `<div>${str}</div>`).join('');
+    const list = Array.isArray(result.message) ? result.message.map((str) => `<div>${str}</div>`).join('') : result.message;
 
     errorsList.innerHTML = list;
   }
