@@ -85,5 +85,5 @@ export default {
   callback_form_error: 'Request not sent!',
 
   contact_us: 'Contact us',
-  developed_in: 'Designed in',
+  developed_in: 'Designed in <a href="https://neotech.uz/" rel="nofollow" target="_blank">Neotech</a>',
 };
