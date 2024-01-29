@@ -40,7 +40,8 @@ const phoneField = form.querySelector('[name="phone"]');
 const maskOptions = { mask: '+{998}(00)000-00-00' };
 const mask = IMask(phoneField, maskOptions);
 
-const select = new MySelect(document.querySelector('.select-field'));
+const selectField = document.querySelector('.select-field');
+const select = new MySelect(selectField);
 select.init();
 
 phoneField.addEventListener('keyup', () => {

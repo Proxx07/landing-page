@@ -75,7 +75,7 @@ export default {
   callback_form_email: 'Email',
   callback_form_comment: 'Your message',
 
-  callback_form_subject: 'Select the subject of the request',
+  callback_form_subject_title: 'Select the subject of the request',
   callback_form_subject_1: 'Offer',
   callback_form_subject_0: 'Complaint',
 

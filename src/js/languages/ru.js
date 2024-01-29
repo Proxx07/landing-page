@@ -77,7 +77,7 @@ export default {
   callback_form_email: 'E-mail',
   callback_form_comment: 'Ваше сообщение',
 
-  callback_form_subject: 'Выберите тему обращения',
+  callback_form_subject_title: 'Выберите тему обращения',
   callback_form_subject_1: 'Предложение',
   callback_form_subject_0: 'Жалоба',
 

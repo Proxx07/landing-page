@@ -13,6 +13,9 @@ class MySelect {
 
     this.selectWrapper.classList.add('custom-select');
     this.titleBlock.classList.add('custom-select__title');
+
+    this.titleBlock.dataset.ln = 'callback_form_subject_title';
+
     this.dropdown.classList.add('custom-select__dropdown');
 
     this.titleBlock.addEventListener('click', () => this.selectToggle());
@@ -36,7 +39,7 @@ class MySelect {
     if (this.isSearchEnabled) {
       this.titleBlock.setAttribute('placeholder', this.placeholderText);
     } else {
-      this.titleBlock.innerText = this.placeholderText;
+      this.titleBlock.textContent = this.placeholderText;
     }
 
     this.selectWrapper.appendChild(this.select);
@@ -47,6 +50,8 @@ class MySelect {
   _createListItem(option) {
     const item = document.createElement('li');
     item.classList.add('custom-select__item');
+
+    item.dataset.ln = option.dataset.ln && option.dataset.ln;
     item.dataset.value = option.value;
     item.innerHTML = option.innerHTML;
     return item;
@@ -62,7 +67,7 @@ class MySelect {
     });
 
     this.items.forEach((item) => {
-      item.addEventListener('click', (event) => this.onChange(event));
+      item.addEventListener('click', (event) => this._onChange(event));
       this.dropdown.appendChild(item);
     });
   }
@@ -93,13 +98,17 @@ class MySelect {
     this._renderItems(filteredItems);
   }
 
-  onChange(event) {
+  _onChange(event) {
+    console.log(event.target);
     this.select.value = event.target.dataset.value;
+
     if (this.isSearchEnabled) {
       this.titleBlock.value = event.target.innerText;
     } else {
       this.titleBlock.innerText = event.target.innerText;
     }
+
+    this.titleBlock.dataset.ln = event.target.dataset.ln;
 
     this.selectClose();
     this.select.dispatchEvent(new Event('change', event));
