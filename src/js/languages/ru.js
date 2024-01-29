@@ -87,5 +87,5 @@ export default {
   callback_form_error: 'Заявка не отправлена!',
 
   contact_us: 'Связаться с нами',
-  developed_in: 'Разработано в <a href="https://neotech.uz/" rel="nofollow" target="_blank">Neotech</a>',
+  // developed_in: 'Разработано в <a href="https://neotech.uz/" rel="nofollow" target="_blank">Neotech</a>',
 };

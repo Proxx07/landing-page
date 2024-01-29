@@ -87,5 +87,5 @@ export default {
   callback_form_error: 'Sizning arizangiz yuborilmadi!',
 
   contact_us: "Biz bilan bog'lanish",
-  developed_in: '<a href="https://neotech.uz/" rel="nofollow" target="_blank">Neotechda</a> ishlab chiqilgan',
+  // developed_in: '<a href="https://neotech.uz/" rel="nofollow" target="_blank">Neotechda</a> ishlab chiqilgan',
 };
