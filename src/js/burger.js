@@ -3,7 +3,7 @@ const burgerMenu = () => {
   const burgerContentPart = document.querySelector('.burger-content-js');
   const burgerToggler = [...document.querySelectorAll('.burger-toggle-js')];
 
-  const burgerFooter = burger.querySelector('.footer');
+  // const burgerFooter = burger.querySelector('.footer');
   if (!burgerContentPart || !burgerToggler.length || !burger) return;
   const toggleBurger = () => {
     document.querySelector('html').toggleAttribute('no-scroll');
@@ -23,7 +23,7 @@ const burgerMenu = () => {
 
   if (window.innerWidth < 1025) {
     const footer = document.querySelector('footer.footer');
-    const neoTechCopyright = footer.querySelector('.neotech-copyright');
+    // const neoTechCopyright = footer.querySelector('.neotech-copyright');
     const menu = footer.querySelector('.footer-menu');
     const language = document.querySelector('.language');
 
@@ -35,8 +35,7 @@ const burgerMenu = () => {
     });
 
     menu.classList.add('menu');
-
-    burgerFooter.appendChild(neoTechCopyright);
+    // burgerFooter.appendChild(neoTechCopyright);
     burgerContentPart.appendChild(menu);
     burgerContentPart.appendChild(language);
   }
