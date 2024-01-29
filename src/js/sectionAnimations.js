@@ -49,9 +49,16 @@ if (window.innerWidth >= 1280) {
     opacity: 0,
     duration: 2,
     scrollTrigger: {
+      trigger: '.for-business',
+      start: 'top center',
+      end: 'top center',
+    },
+  });
+
+  gsap.from('.for-business .heading', {
+    scrollTrigger: {
       trigger: '.for-business .header-wrapper',
       start: 'center center',
-      // end: '+=400px center',
       end: '+=50% center',
       pin: true,
     },
