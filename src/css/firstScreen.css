@@ -220,20 +220,16 @@ footer.footer {
     }
   }
 
-  .neotech-copyright {
-    @media all and (max-width: 1024px) {
-      display: none;
-    }
-    span {
-      opacity: 0.5;
-    }
-
-    a {
-      text-decoration: none;
-      color: var(--secondary-color);
+  .footer-empty-left {
+    @media all and (min-width: 1025px) {
+      min-width: 200px;
     }
   }
   .copyright {
+    @media all and (min-width: 1025px) {
+      min-width: 200px;
+    }
+    text-align: right;
     opacity: 0.5;
   }
 }
