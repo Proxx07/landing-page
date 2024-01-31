@@ -35,6 +35,7 @@ window.addEventListener('scroll', () => {
 const formWrapper = document.querySelector('.form-wrapper');
 const form = formWrapper.querySelector('.callback-form');
 const errorsList = formWrapper.querySelector('.error-list');
+const formFields = form.querySelectorAll('[name]');
 
 const phoneField = form.querySelector('[name="phone"]');
 const maskOptions = { mask: '+{998}(00)000-00-00' };
@@ -42,6 +43,7 @@ const mask = IMask(phoneField, maskOptions);
 
 const selectField = document.querySelector('.select-field');
 const select = new MySelect(selectField);
+
 select.init();
 
 phoneField.addEventListener('keyup', () => {
@@ -52,7 +54,7 @@ form.addEventListener('submit', async (event) => {
   event.preventDefault();
   const fields = {};
 
-  form.querySelectorAll('[name]').forEach((field) => {
+  formFields.forEach((field) => {
     if (field.attributes.name.value === 'subject') {
       fields[field.attributes.name.value] = +field.value;
       return;
@@ -66,6 +68,8 @@ form.addEventListener('submit', async (event) => {
     fields[field.attributes.name.value] = field.value;
   });
 
+  formWrapper.classList.remove('error');
+  formWrapper.classList.remove('success');
   formWrapper.classList.add('loading');
 
   const result = await $request.post('/landing/feedback', fields);
@@ -73,8 +77,17 @@ form.addEventListener('submit', async (event) => {
   formWrapper.classList.remove('loading');
 
   if (result.statusCode < 300) {
-    form.remove();
     errorsList.innerHTML = '';
+    formFields.forEach((field) => {
+      field.value = '';
+      if (field.tagName.toLocaleLowerCase() === 'select') {
+        if (!field.closest('.custom-select')) return;
+        const selectTitle = field.closest('.custom-select').querySelector('.custom-select__title');
+        selectTitle.textContent = field.querySelector('option[disabled][hidden]').innerText;
+        selectTitle.dataset.ln = field.querySelector('option[disabled][hidden]').dataset.ln;
+        console.log(selectTitle);
+      }
+    });
     formWrapper.classList.remove('error');
     formWrapper.classList.add('success');
   } else {

@@ -111,9 +111,7 @@ form {
     .form-success {
       display: flex;
     }
-    .callback-form {
-      display: none;
-    }
+
     .result-wrapper {
       display: block;
     }

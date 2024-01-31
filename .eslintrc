@@ -17,6 +17,7 @@
     "import/extensions": 0,
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "quote-props": 0,
+    "no-param-reassign": "off",
     "linebreak-style": 0,
     "no-underscore-dangle": "off",
     "class-methods-use-this": "off",

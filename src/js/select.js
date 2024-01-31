@@ -99,7 +99,6 @@ class MySelect {
   }
 
   _onChange(event) {
-    console.log(event.target);
     this.select.value = event.target.dataset.value;
 
     if (this.isSearchEnabled) {
