@@ -5,14 +5,15 @@ if (buttons.length && modals.length) {
   const popupToggler = (element) => {
     element.classList.toggle('open');
     document.querySelector('html').toggleAttribute('no-scroll');
-
-    // if (!element.classList.contains('open')) {
-    //   const formWrapper = element.querySelector('.form-wrapper');
-    //   if (!formWrapper) return;
-    //   formWrapper.classList.remove('success');
-    //   formWrapper.classList.remove('loading');
-    //   formWrapper.classList.remove('error');
-    // }
+    /*
+    if (!element.classList.contains('open')) {
+      const formWrapper = element.querySelector('.form-wrapper');
+      if (!formWrapper) return;
+      formWrapper.classList.remove('success');
+      formWrapper.classList.remove('loading');
+      formWrapper.classList.remove('error');
+    }
+    */
   };
 
   buttons.forEach((button) => {
