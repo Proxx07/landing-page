@@ -454,18 +454,27 @@
 
           <div class="form-wrapper">
             <div class="result-wrapper">
-              <div class="form-success section-text">
-                <svg id="Capa_1" viewBox="0 0 50 50" xml:space="preserve">
-                  <circle style="fill:#25ae41" cx="25" cy="25" r="25" />
-                  <polyline
-                    style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
-                    points="38,15 22,33 12,25" />
+              <div class="form-success">
+                <svg width="50" height="51" viewBox="0 0 50 51" fill="none">
+                  <rect y="0.5" width="50" height="50" rx="25" fill="url(#paint0_linear_1429_298)" />
+                  <path d="M15.668 26.8335L21.0013 32.1668L34.3346 18.8335" stroke="white" stroke-width="2.66667"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <defs>
+                    <linearGradient id="paint0_linear_1429_298" x1="-2.56114e-07" y1="49.9318" x2="50" y2="-0.0681815"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#B9F03C" />
+                      <stop offset="1" stop-color="#23B9CD" />
+                    </linearGradient>
+                  </defs>
                 </svg>
-                <span data-ln="callback_form_succes">Sizning arizangiz yuborildi!</span>
+                <span class="title" data-ln="callback_form_succes">Arizangiz yuborildi</span>
+                <div class="text" data-ln="callback_form_succes_text">
+                  Biz sizning xabaringizni oldik. Biz sizga imkon qadar tezroq javob beramiz
+                </div>
               </div>
 
               <div class="error-wrapper">
-                <div class="form-error section-text">
+                <div class="form-error">
                   <svg id="Capa_1" viewBox="0 0 50 50" xml:space="preserve">
                     <circle style="fill:#f1604d" cx="25" cy="25" r="25" />
                     <polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
@@ -473,9 +482,9 @@
                     <polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
                       points="16,16 25,25 34,34   " />
                   </svg>
-                  <span data-ln="callback_form_error">Sizning arizangiz yuborilmadi!</span>
+                  <span class="title" data-ln="callback_form_error">Arizangiz yuborilmadi!</span>
                 </div>
-                <div class="error-list"></div>
+                <div class="error-list text"></div>
               </div>
             </div>
             <form class="callback-form">

@@ -85,9 +85,9 @@ form.addEventListener('submit', async (event) => {
         const selectTitle = field.closest('.custom-select').querySelector('.custom-select__title');
         selectTitle.textContent = field.querySelector('option[disabled][hidden]').innerText;
         selectTitle.dataset.ln = field.querySelector('option[disabled][hidden]').dataset.ln;
-        console.log(selectTitle);
       }
     });
+    form.remove();
     formWrapper.classList.remove('error');
     formWrapper.classList.add('success');
   } else {

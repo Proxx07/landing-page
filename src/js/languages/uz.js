@@ -83,8 +83,9 @@ export default {
 
   callback_form_button: "Jo'natish",
   callback_form_footer_title: 'Kontaktlar',
-  callback_form_succes: 'Sizning arizangiz yuborildi!',
-  callback_form_error: 'Sizning arizangiz yuborilmadi!',
+  callback_form_succes: 'Arizangiz yuborildi',
+  callback_form_succes_text: 'Biz sizning xabaringizni oldik. Biz sizga imkon qadar tezroq javob beramiz',
+  callback_form_error: 'Arizangiz yuborilmadi!',
 
   contact_us: "Biz bilan bog'lanish",
   // developed_in: '<a href="https://neotech.uz/" rel="nofollow" target="_blank">Neotechda</a> ishlab chiqilgan',

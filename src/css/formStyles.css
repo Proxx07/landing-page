@@ -108,6 +108,7 @@ form {
   }
 
   &.success {
+    pointer-events: none;
     .form-success {
       display: flex;
     }
@@ -128,19 +129,34 @@ form {
 
   .error-wrapper {
     .error-list {
-      padding-left: 68px;
+      padding-top: 10px;
       color: #f1604d;
+      text-align: center;
     }
   }
 
   .form-success,
   .form-error {
     display: none;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
+    text-align: center;
     color: #000;
     svg {
       width: 50px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
     }
   }
 }

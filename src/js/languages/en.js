@@ -81,7 +81,8 @@ export default {
 
   callback_form_button: 'Send',
   callback_form_footer_title: 'Contacts',
-  callback_form_succes: 'Request has been sent!',
+  callback_form_succes: 'Submitted',
+  callback_form_succes_title: "We have received your message. We'll callback to you with an answer as soon as possible",
   callback_form_error: 'Request not sent!',
 
   contact_us: 'Contact us',
