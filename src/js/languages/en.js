@@ -75,16 +75,15 @@ export default {
   callback_form_email: 'Email',
   callback_form_comment: 'Your message',
 
-  callback_form_subject_title: 'Select the subject of the request',
-  callback_form_subject_1: 'Offer',
+  callback_form_subject_title: 'Select the subject',
+  callback_form_subject_1: 'Offers',
   callback_form_subject_0: 'Complaint',
 
   callback_form_button: 'Send',
   callback_form_footer_title: 'Contacts',
-  callback_form_succes: 'Submitted',
-  callback_form_succes_text: "We have received your message. We'll callback to you with an answer as soon as possible",
-  callback_form_error: 'Request rejected!',
-
+  callback_form_succes: 'Sent',
+  callback_form_succes_text: "We have received your message. We'll get back to you as soon as possible",
+  callback_form_error: 'Message not sent!',
   contact_us: 'Contact us',
   // developed_in: 'Designed in <a href="https://neotech.uz/" rel="nofollow" target="_blank">Neotech</a>',
 };

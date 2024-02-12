@@ -78,14 +78,14 @@ export default {
   callback_form_comment: 'Sizning xabaringiz',
 
   callback_form_subject_title: 'Murojat mavzusini tanlang',
-  callback_form_subject_1: 'Taklif',
+  callback_form_subject_1: 'Takliflar',
   callback_form_subject_0: 'Shikoyat',
 
   callback_form_button: "Jo'natish",
   callback_form_footer_title: 'Kontaktlar',
-  callback_form_succes: 'Arizangiz yuborildi',
+  callback_form_succes: 'Yuborildi',
   callback_form_succes_text: 'Biz sizning xabaringizni oldik. Biz sizga imkon qadar tezroq javob beramiz',
-  callback_form_error: 'Arizangiz yuborilmadi!',
+  callback_form_error: 'Ariza yuborilmadi!',
 
   contact_us: "Biz bilan bog'lanish",
   // developed_in: '<a href="https://neotech.uz/" rel="nofollow" target="_blank">Neotechda</a> ishlab chiqilgan',

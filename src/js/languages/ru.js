@@ -78,14 +78,14 @@ export default {
   callback_form_comment: 'Ваше сообщение',
 
   callback_form_subject_title: 'Выберите тему обращения',
-  callback_form_subject_1: 'Предложение',
+  callback_form_subject_1: 'Предложения',
   callback_form_subject_0: 'Жалоба',
 
   callback_form_button: 'Отправить',
   callback_form_footer_title: 'Контакты',
   callback_form_succes: 'Отправлено',
   callback_form_succes_text: 'Мы получили ваше сообщение. Вернемся к вам с ответом как можно скорее',
-  callback_form_error: 'Заявка не отправлена!',
+  callback_form_error: 'Сообщение не отправлено!',
 
   contact_us: 'Связаться с нами',
   // developed_in: 'Разработано в <a href="https://neotech.uz/" rel="nofollow" target="_blank">Neotech</a>',
